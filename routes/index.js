@@ -5,8 +5,8 @@ router.get('/', (req, res) => {
     res.send("Telegram @TodayDevblog_bot");
 });
 
-router.get('/article/:url', (req,res)=>{
-    res.redirect(req.params.url);
+router.get('/article', (req,res)=>{
+    res.redirect(req.query.url);
 });
 
 module.exports = router;
