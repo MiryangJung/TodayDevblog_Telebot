@@ -4,10 +4,13 @@
 > [awesome-devblog](https://github.com/sarojaba/awesome-devblog)에서 글을 제공받습니다.
 
 
-# Telegram
+# 사용 방법
 
 ID : __@TodayDevblog_bot__<br>
 Link: [t.me/TodayDevblog_bot](https://t.me/TodayDevblog_bot)
+
+- `텔레그램`에서 __@TodayDevblog_bot__ 친구추가<br>
+- [t.me/TodayDevblog_bot](https://t.me/TodayDevblog_bot) 클릭
 
 ![example](example.png)
 
