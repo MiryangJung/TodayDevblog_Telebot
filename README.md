@@ -6,7 +6,7 @@
 
 # Telegram
 
-ID : __@TodayDevblog_bot__
+ID : __@TodayDevblog_bot__<br>
 Link: [t.me/TodayDevblog_bot](https://t.me/TodayDevblog_bot)
 
 ![example](example.png)
