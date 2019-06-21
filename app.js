@@ -20,7 +20,7 @@ Crawl.crawling();
 console.log("Crawling Now!");
 
 // Send message 22:00
-node_cron.schedule('50 22 * * *', () => {
+node_cron.schedule('5 23 * * *', () => {
     Bot.sendList();
 },{
     scheduled: true,
