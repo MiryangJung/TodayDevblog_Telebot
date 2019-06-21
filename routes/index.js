@@ -9,21 +9,20 @@ router.get('/', (req, res) => {
 router.get('/article', (req,res)=>{
     url = "https://todaydevblog.herokuapp.com"+req.url;
 
-    List.findOne({link:url})
+    List.find({link:url})
         .exec()
         .then(data => {
-            if (data.length >= 1) {
-                List.findOneAndUpdate({link:url}, {$set: {view: data.view + 1}}, function (err) {
+            if (data.length === 1) {
+                List.findOneAndUpdate({link:url}, {$set: {view: data[0].view + 1}}, function (err) {
                     if (err) console.log('View Update Error : ' + err);
                 });
-
             }
         })
         .catch(err=>{
              console.log('List find Error for view update : '+err);
         });
 
-    res.redirect(url);
+    res.redirect(req.query.url);
 });
 
 module.exports = router;
