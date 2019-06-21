@@ -9,9 +9,19 @@ router.get('/', (req, res) => {
 router.get('/article', (req,res)=>{
     url = req.query.url;
 
-    List.findOneAndUpdate({link:url}, {$set:{view:view+1}}, function(err) {
-        if(err) console.log('View Update Error : '+err);
-    });
+    List.findOne({link:url})
+        .exec()
+        .then(data => {
+            if (data.length >= 1) {
+                List.findOneAndUpdate({link: url}, {$set: {view: data.view + 1}}, function (err) {
+                    if (err) console.log('View Update Error : ' + err);
+                });
+
+            }
+        })
+        .catch(err=>{
+             console.log('List find Error for view update : '+err);
+        });
 
     res.redirect(url);
 });
