@@ -16,11 +16,8 @@ let url = process.env.DBurl;
 mongoose.connect(url, {useNewUrlParser: true});
 mongoose.set('useFindAndModify', false);
 
-Crawl.crawling();
-console.log("Crawling Now!");
-
 // Send message 22:00
-node_cron.schedule('15 2 * * *', () => {
+node_cron.schedule('0 22 * * *', () => {
     Bot.sendList();
 },{
     scheduled: true,
@@ -32,6 +29,7 @@ node_cron.schedule('15 2 * * *', () => {
 // crawling every hour
 node_cron.schedule('30 * * * *', () => {
     Crawl.crawling();
+    console.log("Crawling now!")
 },{
     scheduled: true,
     timezone: "Asia/Seoul"

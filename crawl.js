@@ -42,8 +42,6 @@ function crawling() {
             var linkstr=link[i].toString();
             linkstr=linkstr.replace("https://awesome-devblog.sarojaba.now.sh/domestic/article?url=","https://todaydevblog.herokuapp.com/article?url=");
 
-            console.log(titlestr+"\n"+datestr+"\n"+authstr);
-
             saveDB(authstr,titlestr,datestr,linkstr);
         }
         await browser.close();

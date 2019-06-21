@@ -75,7 +75,6 @@ function deleteUser(chatId){
 }
 
 function todayList(today,chatId){
-    console.log(today);
     List.find({date:today})
         .exec()
         .then(data => {
