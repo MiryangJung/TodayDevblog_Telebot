@@ -18,8 +18,8 @@ mongoose.set('useFindAndModify', false);
 Crawl.crawling();
 console.log("Crawling Now!");
 
-// scheduler
-node_cron.schedule('25,28,30 * * * *', () => {
+// Send message 22:00
+node_cron.schedule('00 22 * * * *', () => {
     Bot.sendList();
 },{
     scheduled: true,
@@ -28,8 +28,8 @@ node_cron.schedule('25,28,30 * * * *', () => {
 
 
 
-// scheduler
-node_cron.schedule('9 1 * * *', () => {
+// crawling every hour
+node_cron.schedule('30 0 * * *', () => {
     Crawl.crawling();
 },{
     scheduled: true,
