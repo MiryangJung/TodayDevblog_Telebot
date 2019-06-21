@@ -19,7 +19,7 @@ Crawl.crawling();
 console.log("Crawling Now!");
 
 // scheduler
-node_cron.schedule('50,52,54,56 * * * *', () => {
+node_cron.schedule('45 46 48 * * * *', () => {
     Bot.sendList();
 },{
     scheduled: true,
