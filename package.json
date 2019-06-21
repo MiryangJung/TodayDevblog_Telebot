@@ -1,0 +1,24 @@
+{
+  "name": "todaydevblog_bot-telegram",
+  "version": "1.0.0",
+  "description": "TodayDevblog_bot-Telegram",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "MiryangJung<jung@miryang.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.25",
+    "mongoose": "^5.6.0",
+    "node-cron": "^2.0.3",
+    "node-telegram-bot-api": "^0.30.0",
+    "puppeteer": "^1.17.0",
+    "querystring": "^0.2.0"
+  }
+}
