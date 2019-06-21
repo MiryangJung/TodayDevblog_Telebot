@@ -8,6 +8,7 @@ const PORT= process.env.PORT || 3000;
 
 const Crawl = require("./crawl.js");
 const Bot = require("./bot.js");
+const indexRoute = require("./routes/index");
 require('./bot.js');
 
 // DB연결
@@ -36,12 +37,9 @@ node_cron.schedule('30 * * * *', () => {
     timezone: "Asia/Seoul"
 });
 
-// 1시간마다 크롤링
-/*node_cron.schedule('* * * * *', () => {
-    Crawl.crawling();
-    console.log("Crawling Now!")
-});*/
 
+// use routes
+app.use("/", indexRoute);
 
 //listen
 app.listen(PORT, function () {

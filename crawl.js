@@ -40,6 +40,7 @@ function crawling() {
             titlestr=titlestr.replace(/\]/gi,"");
             var datestr=date[i].toString();
             var linkstr=link[i].toString();
+            linkstr("https://awesome-devblog.sarojaba.now.sh/domestic/article?url=","https://todaydevblog.herokuapp.com/article/");
 
             saveDB(authstr,titlestr,datestr,linkstr);
         }
