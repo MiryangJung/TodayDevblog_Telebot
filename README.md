@@ -26,6 +26,9 @@ npm install
 node app.js
 ```
 
+## To Do
+- [netlify](https://www.netlify.com/)로 옮기기
+- 구독자 수, 클릭 수 등 차트로 시각화 하기
 
 ## 기여
 
