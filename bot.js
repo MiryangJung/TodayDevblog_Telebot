@@ -31,11 +31,7 @@ function sendList() {
             else {
                 for(i=0; i<lists.length; i++){
                     var chatId=lists[i].chatId;
-
-                    //var daily_list = todayList(moment().format('YYYY-MM-DD'));
                     todayList(moment().format('YYYY-MM-DD'),chatId);
-
-
                 }
             }
         });
