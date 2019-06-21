@@ -4,7 +4,13 @@ const List = require('./models/list');
 
 function crawling() {
     (async () => {
-        const browser = await puppeteer.launch({headless: true});
+        const browser = await puppeteer.launch({
+            headless: true,
+            args: [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+            ]
+        });
         const page = await browser.newPage();
         await page.goto('https://awesome-devblog.netlify.com/domestic/',{
             waitUntil: 'networkidle2', timeout: 500000
