@@ -7,13 +7,13 @@ router.get('/', (req, res) => {
 });
 
 router.get('/article', (req,res)=>{
-    url = req.query.url;
+    url = req.url;
 
     List.findOne({link:url})
         .exec()
         .then(data => {
             if (data.length >= 1) {
-                List.findOneAndUpdate({link: url}, {$set: {view: data.view + 1}}, function (err) {
+                List.findOneAndUpdate({link:url}, {$set: {view: data.view + 1}}, function (err) {
                     if (err) console.log('View Update Error : ' + err);
                 });
 
