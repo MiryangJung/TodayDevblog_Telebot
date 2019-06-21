@@ -29,7 +29,7 @@ node_cron.schedule('00 22 * * * *', () => {
 
 
 // crawling every hour
-node_cron.schedule('30 0 * * *', () => {
+node_cron.schedule('30 * * * *', () => {
     Crawl.crawling();
 },{
     scheduled: true,
