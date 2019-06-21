@@ -88,12 +88,12 @@ function todayList(today,chatId){
                 return todayListSend(list,chatId)
             }
             if (data.length < 1) {
-                return ("오늘은 올라온 글이 없어요.");
+                return todayListSend("오늘은 올라온 글이 없어요.",chatId)
             }
         })
         .catch(err =>{
             console.log("todayList Find Error : "+err);
-            return ("오늘은 점검 중입니다.");
+            return todayListSend("오늘은 점검 중입니다.",chatId)
          });
 }
 

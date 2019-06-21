@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/article', (req,res)=>{
-    url = req.url;
+    url = "https://todaydevblog.herokuapp.com"+req.url;
 
     List.findOne({link:url})
         .exec()
