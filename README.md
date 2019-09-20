@@ -1,7 +1,9 @@
+# This Bot is now closed.
 # TodayDevblog_bot
 
 > 매일 오후 10시에 오늘 새로 올라온 개발자블로그의 글들을 보내주는 텔레그램 봇입니다.
 > [awesome-devblog](https://github.com/sarojaba/awesome-devblog)에서 글을 제공받습니다.
+
 
 
 # 사용 방법
